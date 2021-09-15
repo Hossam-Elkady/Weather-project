@@ -40,7 +40,7 @@ search.onkeyup = function () {
 let response;
 
 async function apiCall(loc) {
-    var link = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=467b4593d6734ab9837224325211209&q=${loc}&days=3&aqi=no&alerts=no`);
+    var link = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=467b4593d6734ab9837224325211209&q=${loc}&days=3&aqi=no&alerts=no`);
     response = await link.json()
     apiLocName = response.location.name;
     apiCurrentTemp = response.forecast.forecastday[0].hour[time].temp_c;
@@ -70,7 +70,7 @@ async function apiCall(loc) {
 
 
 async function currentLocation() {
-    var link = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=467b4593d6734ab9837224325211209&q=cairo&days=3&aqi=no&alerts=no`);
+    var link = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=467b4593d6734ab9837224325211209&q=cairo&days=3&aqi=no&alerts=no`);
     response = await link.json()
     apiLocName = response.location.name;
     dayState = response.forecast.forecastday[0].hour[time].condition.text;
