@@ -120,3 +120,17 @@ input[type=text]:focus{
         margin: 0 0 10 0;
     } 
 }
+@media (max-width: 1000px) {
+    .navbar-collapse
+    {
+        border-radius: 5%;
+        background-color:transparent;
+        text-align: center;
+    }
+    .nav-link{
+        color: white !important;
+    }
+    nav ul li{
+        margin:5 0  ;
+    }
+}
